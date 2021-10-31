@@ -1,7 +1,7 @@
 const { createHash } = require('crypto')
 let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { text, usedPrefix }) {
-  let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
+  let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
   let user = global.db.data.users[m.sender]
   if (user.registered === true) throw `Anda sudah terdaftar\n\nMau daftar ulang? ${usedPrefix}unreg <SN|SERIAL NUMBER>`
   if (!Reg.test(text)) throw `Format salah\n\n*${usedPrefix}daftar nama|umur*`
@@ -41,7 +41,7 @@ await conn.fakeReply(m.chat, caption,/* {
       "mimetype": "image/jpeg", 
       "caption": */`Registration Successful!`, /*
       "jpegThumbnail": tnbot} } }, { contextInfo: { mentionedJid: [m.sender] } }m*/'status@broadcast')
-global.DATABASE._data.users[m.sender].uang += 10000
+global.db.data.users[m.sender].uang += 10000
 }
 //handler.help = ['daftar', 'reg', 'register'].map(v => v + ' <nama>.<umur>')
 //handler.tags = ['exp']
