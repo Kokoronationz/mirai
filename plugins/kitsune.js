@@ -4,29 +4,19 @@ const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn}) => {
   try {
-  let res = await fetch('https://some-random-api.ml/animu/hug')
+  let res = await fetch('https://neko-love.xyz/api/v1/kitsune')
   let json = await res.json()
   let { 
-link
+url
 } = json
-let stiker = await sticker(null, link, 'Hug', '@Kokoronationz')
+let stiker = await sticker(null, url, 'Kitsune', '@Kokoronationz')
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
  } catch (e) {
   }
 }
-handler.command = /^hug/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.command = /^kitsune/i
 handler.register = true
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
 
 module.exports = handler
