@@ -455,7 +455,7 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: '_Perintah ini hanya dapat digunakan oleh Owner © 栗山未来_',
+    rowner: '_Perintah ini hanya dapat digunakan oleh Owner 栗山未来_',
     owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
     mods: '_Perintah ini hanya dapat digunakan oleh Moderator_',
     premium: '_Perintah ini hanya untuk member Premium_',
