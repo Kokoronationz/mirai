@@ -71,7 +71,7 @@ module.exports = {
           if (!('banned' in user)) user.banned = false
           if (!isNumber(user.level)) user.level = 0
           if (!user.role) user.role = 'Beginner'
-          if (!('autolevelup' in user)) user.autolevelup = false
+          if (!('autolevelup' in user)) user.autolevelup = true
         } else global.db.data.users[m.sender] = {
           healt: 100,
           uang: 0,
@@ -112,7 +112,7 @@ module.exports = {
           banned: false,
           level: 0,
           role: 'Beginner',
-          autolevelup: false,
+          autolevelup: true,
         }
 
         let chat = global.db.data.chats[m.chat]
