@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Link:* https://wa.me/${who.split`@`[0]}${registered ? '\n*Age:* ' + age : ''}
 *Saldo:* Rp${uang}
 *Koin:* ${koin}
-XP*XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
+*XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 *Level:* ${level}
 *Role:* ${role}
 *Limit:* ${limit}
@@ -36,7 +36,7 @@ XP*XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPref
 }
 //handler.help = ['profile [@user]']
 //handler.tags = ['tools']
-handler.command = /^profile$/i
+handler.command = /^profile?$/i
 handler.register = true
 
 module.exports = handler
