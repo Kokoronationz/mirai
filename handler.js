@@ -57,6 +57,7 @@ module.exports = {
           
           if (!isNumber(user.exp)) user.exp = 0
           if (!isNumber(user.limit)) user.limit = 10
+          if (!isNumber(user.warn)) user.warn = 0
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!isNumber(user.lastadventure)) user.lastadventure = 0
           if (!('registered' in user)) user.registered = false
@@ -99,6 +100,7 @@ module.exports = {
           makananpet: 0,
           exp: 0,
           limit: 10,
+          warn: 0,
           lastclaim: 0,
           lastadventure: 0,
           registered: false,
@@ -449,14 +451,14 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk *Admin* grup!',
-    botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
+    rowner: '_Perintah ini hanya dapat digunakan oleh Owner © 栗山未来_',
+    owner: '_Perintah ini hanya dapat digunakan oleh Owner Bot_',
+    mods: '_Perintah ini hanya dapat digunakan oleh Moderator_',
+    premium: '_Perintah ini hanya untuk member Premium_',
+    group: '_Perintah ini hanya dapat digunakan di grup_',
+    private: '_Perintah ini hanya dapat digunakan di Chat Pribadi_',
+    admin: '_Perintah ini hanya untuk *Admin* grup_',
+    botAdmin: '_Jadikan bot sebagai *Admin* untuk menggunakan perintah ini_',
     unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama|umur*\n\nContoh: *#daftar Kuriyama|16*'
   }[type]
   if (msg) return m.reply(msg)
