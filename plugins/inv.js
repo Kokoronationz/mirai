@@ -96,7 +96,7 @@ Banned: *No*
 }
 // handler.help = ['inventory', 'inv']
 // handler.tags = ['rpg']
-handler.command = /^(inv(entory)$/i
+handler.command = /^(inv(entory)?)$/i
 handler.register = true
 module.exports = handler
 
