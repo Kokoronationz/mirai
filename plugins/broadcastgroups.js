@@ -6,8 +6,8 @@ let handler  = async (m, { conn, text }) => {
   for (let id of groups) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : teks + '\n' + readMore + '「 All Group Broadcast 」\n' + randomID(32)), true).catch(_=>_)
   m.reply('Selesai Broadcast All Group :)')
 }
-handler.help = ['broadcastgroup','bcgc'].map(v => v + ' <teks>')
-handler.tags = ['owner']
+//handler.help = ['broadcastgroup','bcgc'].map(v => v + ' <teks>')
+//handler.tags = ['owner']
 handler.command = /^(broadcast|bc)(group|grup|gc)$/i
 handler.owner = true
 handler.mods = false
