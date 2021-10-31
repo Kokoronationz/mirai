@@ -28,6 +28,7 @@ module.exports = {
         if (user) {
           if (!isNumber(user.healt)) user.healt = 0
           if (!isNumber(user.uang)) user.uang = 0
+          if (!isNumber(user.koin)) user.koin = 0
           if (!isNumber(user.diamond)) user.diamond = 0
           
           if (!isNumber(user.common)) user.common = 0
@@ -75,6 +76,7 @@ module.exports = {
         } else global.db.data.users[m.sender] = {
           healt: 100,
           uang: 0,
+          koin, 0,
           diamond: 0,
           iron: 0,
           common: 0,
