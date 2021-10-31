@@ -76,7 +76,7 @@ module.exports = {
         } else global.db.data.users[m.sender] = {
           healt: 100,
           uang: 0,
-          koin, 0,
+          koin: 0,
           diamond: 0,
           iron: 0,
           common: 0,
