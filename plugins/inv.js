@@ -94,9 +94,10 @@ Banned: *No*
 `.trim()
     conn.reply(m.chat, str, m)
 }
-handler.help = ['inventory', 'inv']
-handler.tags = ['rpg']
+// handler.help = ['inventory', 'inv']
+// handler.tags = ['rpg']
 handler.command = /^(inv(entory)$/i
+handler.register = true
 module.exports = handler
 
 const more = String.fromCharCode(8206)
