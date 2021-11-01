@@ -16,7 +16,7 @@ await m.reply(global.wait)
 let res = global.API('http://hardianto-chan.herokuapp.com', '/api/rankcard', {
     profile: await conn.getProfilePicture(m.sender).catch(_ => 'https://telegra.ph/file/7995e73e508ee011722b0.png'),
     name: nama,
-    bg: 'https://telegra.ph/file/85ca2cabcbf427b06f2aa.jpg',
+    bg: 'https://telegra.ph/file/b00cb0fd1db60a8a4624e.jpg',
     needxp: max,
     curxp: exp,
     level: level,
