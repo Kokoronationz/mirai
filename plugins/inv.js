@@ -68,19 +68,19 @@ Kuda: *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda ==
 Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*
 Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*\n\n
 *Progress*\n
-┏ ┅ ━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
 ┃Level *${level}* To Level *${level}*
 ┃Exp *${exp}* -> *${max}*
-┗ ┅ ━━━━━━━━━━ ┅ ━
-┏ ┅ ━━━━━━━━━━ ┅ ━
+┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
 ┃Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n┃Exp *${_rubah}* -> *${rubah *100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
-┗ ┅ ━━━━━━━━━━ ┅ ━
-┏ ┅ ━━━━━━━━━━ ┅ ━
+┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
 ┃Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n┃Exp *${_kucing}* -> *${kucing *100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
-┗ ┅ ━━━━━━━━━━ ┅ ━
-┏ ┅ ━━━━━━━━━━ ┅ ━
+┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
 ┃Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n┃Exp *${_kuda}* -> *${kuda *100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
-┗ ┅ ━━━━━━━━━━ ┅ ━\n\n
+┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━\n\n
 *Achievement*
 1.Top level *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
 2.Top Uang *${usersuang.indexOf(m.sender) + 1}* dari *${usersuang.length}*
