@@ -4,7 +4,6 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   let stiker = false
   await m.reply(global.wait)
   try {
-  } finally {
     let q = m.quoted ? m.quoted : m
     let mime = (q.msg || q).mimetype || ''
     if (/image/.test(mime)) {
@@ -24,7 +23,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
       else return m.reply('URL tidak valid!')
     }
-  
+  } finally {
     if (stiker) conn.sendMessage(m.chat, stiker, MessageType.sticker, {
       quoted: m
     })
