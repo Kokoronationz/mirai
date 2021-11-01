@@ -633,7 +633,7 @@ Anda telah membuka *Legendary crate* dan mendapatkan:${ls3 > 0 ? `\nUang: Rp${ls
 }
 // handler.help = ['open <crate>', 'gacha <crate>']
 // handler.tags = ['rpg']
-// handler.command = /^(open|buka|gacha)$/i
+handler.command = /^(open|buka|gacha)$/i
 
 handler.fail = null
 
