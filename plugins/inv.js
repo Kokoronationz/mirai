@@ -1,26 +1,28 @@
 let levelling = require('../lib/levelling')
 let handler = async (m, { conn, usedPrefix }) => {
-    let healt = global.db.data.users[m.sender].healt
-    let armor = global.db.data.users[m.sender].armor 
-    let warn = global.db.data.users[m.sender].warn
-    let pet = global.db.data.users[m.sender].pet
-    let kucing = global.db.data.users[m.sender].kucing
-    let _kucing = global.db.data.users[m.sender].anakkucing
-    let rubah = global.db.data.users[m.sender].rubah
-    let _rubah = global.db.data.users[m.sender].anakrubah
-    let kuda = global.db.data.users[m.sender].kuda
-    let _kuda = global.db.data.users[m.sender].anakkuda
-    let diamond = global.db.data.users[m.sender].diamond
-    let potion = global.db.data.users[m.sender].potion
-    let common = global.db.data.users[m.sender].common
-    let makananpet = global.db.data.users[m.sender].makananpet
-    let uncommon = global.db.data.users[m.sender].uncommon
-    let mythic = global.db.data.users[m.sender].mythic
-    let legendary = global.db.data.users[m.sender].legendary
-    let level = global.db.data.users[m.sender].level
-    let uang = global.db.data.users[m.sender].uang
-    let exp = global.db.data.users[m.sender].exp
-    let sampah = global.db.data.users[m.sender].sampah
+    let user = global.db.data.users[m.sender]
+    let healt = user.healt
+    let armor = user.armor 
+    let warn = user.warn
+    let pet = user.pet
+    let kucing = user.kucing
+    let _kucing = user.anakkucing
+    let rubah = user.rubah
+    let _rubah = user.anakrubah
+    let kuda = user.kuda
+    let _kuda = user.anakkuda
+    let diamond = user.diamond
+    let potion = user.potion
+    let common = user.common
+    let makananpet = user.makananpet
+    let uncommon = user.uncommon
+    let mythic = user.mythic
+    let legendary = user.legendary
+    let level = user.level
+    let uang = user.uang
+    let koin = user.koin
+    let exp = user.exp
+    let sampah = user.sampah
     let { max } = levelling.xpRange(level, exp, global.multiplier)
     let name = m.fromMe ? conn.user : conn.contacts[m.sender]
     let sorteduang = Object.entries(global.db.data.users).sort((a, b) => b[1].uang - a[1].uang)
@@ -46,6 +48,7 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 Health: *${healt}*
 Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
 Uang: *Rp${uang}*
+Koin: *Rp${koin}*
 Level: *${level}*
 Exp: *${exp}*\n
 *Inventory*
@@ -64,21 +67,21 @@ Pet: *${pet}*\n
 Kuda: *${kuda == 0 ? 'Tidak Punya' : '' || kuda == 1 ? 'Level 1' : '' || kuda == 2 ? 'Level 2' : '' || kuda == 3 ? 'Level 3' : '' || kuda == 4 ? 'Level 4' : '' || kuda == 5 ? 'Level MAX' : ''}*
 Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || rubah == 2 ? 'Level 2' : '' || rubah == 3 ? 'Level 3' : '' || rubah == 4 ? 'Level 4' : '' || rubah == 5 ? 'Level MAX' : ''}*
 Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*\n\n
-*Proges*\n
-╭────────────────
-│Level *${level}* To Level *${level}*
-│Exp *${exp}* -> *${max}*
-╰────────────────
-╭────────────────
-│Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n│Exp *${_rubah}* -> *${rubah *100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
-╰────────────────
-╭────────────────
-│Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n│Exp *${_kucing}* -> *${kucing *100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
-╰────────────────
-╭────────────────
-│Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n│Exp *${_kuda}* -> *${kuda *100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
-╰────────────────\n\n
-*achievement*
+*Progress*\n
+┏ ┅ ━━━━━━━━━━ ┅ ━
+┃Level *${level}* To Level *${level}*
+┃Exp *${exp}* -> *${max}*
+┗ ┅ ━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━ ┅ ━
+┃Rubah ${rubah == 0 ? 'Tidak Punya' : '' || rubah > 0 && rubah < 5 ? `Level *${rubah}* To level *${rubah + 1}*\n┃Exp *${_rubah}* -> *${rubah *100}*` : '' || rubah == 5 ? '*Max Level*' : ''}
+┗ ┅ ━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━ ┅ ━
+┃Kucing ${kucing == 0 ? 'Tidak Punya' : '' || kucing > 0 && kucing < 5 ? `Level *${kucing}* To level *${kucing + 1}*\n┃Exp *${_kucing}* -> *${kucing *100}*` : '' || kucing == 5 ? '*Max Level*' : ''}
+┗ ┅ ━━━━━━━━━━ ┅ ━
+┏ ┅ ━━━━━━━━━━ ┅ ━
+┃Kuda ${kuda == 0 ? 'Tidak Punya' : '' || kuda > 0 && kuda < 5 ? `Level *${kuda}* To level *${kuda + 1}*\n┃Exp *${_kuda}* -> *${kuda *100}*` : '' || kuda == 5 ? '*Max Level*' : ''}
+┗ ┅ ━━━━━━━━━━ ┅ ━\n\n
+*Achievement*
 1.Top level *${userslevel.indexOf(m.sender) + 1}* dari *${userslevel.length}*
 2.Top Uang *${usersuang.indexOf(m.sender) + 1}* dari *${usersuang.length}*
 3.Top Diamond *${usersdiamond.indexOf(m.sender) + 1}* dari *${usersdiamond.length}*
