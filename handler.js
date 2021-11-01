@@ -59,6 +59,7 @@ module.exports = {
           if (!isNumber(user.exp)) user.exp = 0
           if (!isNumber(user.limit)) user.limit = 10
           if (!isNumber(user.warn)) user.warn = 0
+          if (!isNumber(user.lastmining)) user.lastmining = 0
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!isNumber(user.lastdaily)) user.lastdaily = 0
           if (!isNumber(user.lastadventure)) user.lastadventure = 0
@@ -104,6 +105,7 @@ module.exports = {
           exp: 0,
           limit: 10,
           warn: 0,
+          lastmining: 0,
           lastclaim: 0,
           lastdaily: 0,
           lastadventure: 0,
