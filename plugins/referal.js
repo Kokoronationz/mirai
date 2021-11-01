@@ -59,6 +59,6 @@ ${Object.entries(uang_bonus).map(([count, money]) => `${count} Orang = Bonus Rp$
 //handler.tags = ['fun']
 
 handler.command = ['ref']
-handler.register = true
+handler.register = false
 
 module.exports = handler
