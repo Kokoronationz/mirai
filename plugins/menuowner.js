@@ -39,6 +39,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}opromote_
 ┃ ❖ _${usedPrefix}odemote_
 ┃ ❖ _${usedPrefix}pengumuman_
+┃ ❖ _${usedPrefix}expired_  [ jumlah hari ]
 ┃ ❖ _${usedPrefix}leavegc_
 ┃ ❖ _${usedPrefix}leavegroup_
 ┃ ❖ _${usedPrefix}leavegroupall_
@@ -55,7 +56,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}setmenubody_
 ┃ ❖ _${usedPrefix}sudo_
 ┃ ❖ _${usedPrefix}upsw_
-┃ ❖ _${usedPrefix}whitelist
+┃ ❖ _${usedPrefix}whitelist_
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim()
     conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Menu nya Yang Punya Bot', 'status@broadcast')
