@@ -20,7 +20,6 @@ let handler = async (m, { conn, usedPrefix }) => {
     let legendary = user.legendary
     let level = user.level
     let uang = user.uang
-    let koin = user.koin
     let exp = user.exp
     let sampah = user.sampah
     let { max } = levelling.xpRange(level, exp, global.multiplier)
@@ -48,7 +47,6 @@ Inventory *${name.vnmae || name.notify || name.name || ('+' + name.jid.split`@`[
 Health: *${healt}*
 Armor: *${armor == 0 ? 'Tidak Punya' : '' || armor == 1 ? 'Leather Armor' : '' || armor == 2 ? 'Iron Armor' : '' || armor == 3 ? 'Gold Armor' : '' || armor == 4 ? 'Diamond Armor' : '' || armor == 5 ? 'Netherite Armor' : ''}*\n
 Uang: *Rp${uang}*
-Koin: *Rp${koin}*
 Level: *${level}*
 Exp: *${exp}*\n
 *Inventory*
