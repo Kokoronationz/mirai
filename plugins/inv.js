@@ -67,7 +67,7 @@ Rubah: *${rubah == 0 ? 'Tidak Punya' : '' || rubah == 1 ? 'Level 1' : '' || ruba
 Kucing: *${kucing == 0 ? 'Tidak Punya' : '' || kucing == 1 ? 'Level 1' : '' || kucing == 2 ? 'Level 2' : '' || kucing == 3 ? 'Level 3' : '' || kucing == 4 ? 'Level 4' : '' || kucing == 5 ? 'Level MAX' : ''}*\n\n
 *Progress*\n
 ┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
-┃Level *${level}* To Level *${level}*
+┃Level *${level}* To Level *${level + 1}*
 ┃Exp *${exp}* -> *${max}*
 ┗ ┅ ━━━━━━━━━━━━━━━ ┅ ━
 ┏ ┅ ━━━━━━━━━━━━━━━ ┅ ━
