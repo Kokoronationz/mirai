@@ -59,7 +59,6 @@ module.exports = {
           if (!isNumber(user.exp)) user.exp = 0
           if (!isNumber(user.limit)) user.limit = 10
           if (!isNumber(user.warn)) user.warn = 0
-          if (!isNumber(user.expired)) user.expired = 0
           if (!isNumber(user.lastmining)) user.lastmining = 0
           if (!isNumber(user.lastgift)) user.lastgift = 0
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
@@ -107,7 +106,6 @@ module.exports = {
           exp: 0,
           limit: 10,
           warn: 0,
-          expired: 0,
           lastmining: 0,
           lastgift: 0,
           lastclaim: 0,
@@ -138,6 +136,7 @@ module.exports = {
           if (!('delete' in chat)) chat.delete = true
           if (!('antiLink' in chat)) chat.antiLink = false
           if (!('viewonce' in chat)) chat.viewonce = false
+          if (!isNumber(chat.expired)) chat.expired = 0
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -149,6 +148,7 @@ module.exports = {
           delete: true,
           antiLink: false,
           viewonce: false,
+          expired: 0,
         }
       } catch (e) {
         console.error(e)
