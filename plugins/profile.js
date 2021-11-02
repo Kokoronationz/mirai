@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
   } finally {
     let about = (await conn.getStatus(who).catch(console.error) || {}).status || ''
-    let { name, koin, limit, uang, exp, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
+    let { name, limit, uang, exp, lastclaim, registered, regTime, age, level, role } = global.db.data.users[who]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let username = conn.getName(who)
     let math = max - xp
@@ -21,7 +21,6 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Number:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 *Link:* https://wa.me/${who.split`@`[0]}${registered ? '\n*Age:* ' + age : ''}
 *Saldo:* Rp${uang}
-*Koin:* ${koin}
 *XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 *Level:* ${level}
 *Role:* ${role}
