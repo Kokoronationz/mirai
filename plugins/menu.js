@@ -17,7 +17,6 @@ const defaultMenu = {
 ┃ ❖ *Level:* %level (%exp / %maxexp)
 ┃ ❖ *EXP:* %totalexp XP
 ┃ ❖ *Saldo:* Rp%uang
-┃ ❖ *Koin:* Rp%koin
 ┃ ❖ *Limit:* %limit
 ┃
 ┃ ❖ *Hari:* %week %weton
@@ -54,7 +53,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
     let kuriyama = './src/photo/kuriyama.png'
     let tnbot = fs.readFileSync('./src/photo/mirai.png')
-    let { exp, uang, koin, limit, level, role } = global.db.data.users[m.sender]
+    let { exp, uang, limit, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
@@ -143,7 +142,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       totalexp: exp,
       xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      level, uang, koin, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+      level, uang, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
