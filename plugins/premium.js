@@ -2,7 +2,7 @@ let handler  = async (m, { conn }) => {
   let bot = conn.user.name
   let teks = `
 Gratis 1 hari percobaan untuk grup! Agar bot _*${bot}*_ tetap berada di grup anda dengan waktu lebih lama silahkan sewa bot dengan harga dibawah ini!
-${readmore}
+${readMore}
 Info donasi untuk premium :
  • Donasi 10.000 = 1 bulan Premium
  • Donasi 20.000 = 2 bulan Premium
