@@ -26,11 +26,11 @@ Apa saja keuntungan premium?
 
 Ayo gabung bersama mereka yang sudah donasi dan mendapatkan banyak keuntungan dengan akses semua fitur bot.
 `.trim()
-  conn.reply(m.chat, text, m)
+  conn.reply(m.chat, teks, m)
   
 }
 
-handler.command = /^prem(imum)?$/i
+handler.command = /^prem(ium)?$/i
 handler.register = true
 
 module.exports = handler
