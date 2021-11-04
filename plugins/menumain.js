@@ -25,6 +25,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}ref_
 ┃ ❖ _${usedPrefix}rank_
 ┃ ❖ _${usedPrefix}rankcard_
+┃ ❖ _${usedPrefix}ceksn_
 ┃ ❖ _${usedPrefix}daftar_  [ nama|umur ]
 ┃ ❖ _${usedPrefix}register_  [ nama|umur ]
 ┃ ❖ _${usedPrefix}tf_  [ uang @user ] Ⓛ
