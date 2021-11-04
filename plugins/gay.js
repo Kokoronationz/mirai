@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
   await m.reply(global.wait)
   conn.sendFile(m.chat, global.API('https://some-random-api.ml', '/canvas/gay', {
     avatar: await conn.getProfilePicture(who).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png'),
-  }), 'gay.png', 'siapa disini yang cita citanya menjadi gay dan memperkosa gw gays?', m)
+  }), 'gay.png', 'Elu Gay?', m)
 }
 
 //handler.help = ['gay']
