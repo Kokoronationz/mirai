@@ -7,9 +7,9 @@ let cd1 = Math.ceil(23 - cdj)
 let cd2 = Math.ceil(59 - cdm)
 let cd3 = Math.ceil(60 - cds)
   if (new Date - global.db.data.users[m.sender].lastdaily > 86400000) {
-    global.db.data.users[m.sender].koin += 2500
+    global.db.data.users[m.sender].uang += 2500
     global.db.data.users[m.sender].potion += 1
-    m.reply('Selamat anda mendapatkan 2500 koin dan 1 potion')
+    m.reply('Selamat anda mendapatkan Rp2500 dan 1 potion')
     global.db.data.users[m.sender].lastdaily = new Date * 1
   } else throw `Anda sudah mengklaim harian hari ini.\n\nTunggu ${cd1} Jam ${cd2} Menit ${cd3} Detik!`
 }
