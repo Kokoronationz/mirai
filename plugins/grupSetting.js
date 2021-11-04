@@ -4,7 +4,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 		'open': false,
 		'close': true,
 	}[(args[0] || '')]
-	await conn.updatePresence(m.chat, Presence.composing)
+	//await conn.updatePresence(m.chat, Presence.composing)
 	if (isClose === undefined)
 		throw `
 *Format salah! Contoh :*
