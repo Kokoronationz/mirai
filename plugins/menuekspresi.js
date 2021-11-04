@@ -23,7 +23,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}nekoz_
 ┃ ❖ _${usedPrefix}notstonk_
 ┃ ❖ _${usedPrefix}nyan_
-┃ ❖ _${usedPrefix}nyam_
+┃ ❖ _${usedPrefix}nom_
 ┃ ❖ _${usedPrefix}pat_
 ┃ ❖ _${usedPrefix}poke_
 ┃ ❖ _${usedPrefix}punch_
