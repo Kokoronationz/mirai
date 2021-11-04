@@ -8,9 +8,11 @@ let teks = `
 ┃ ❖ _${usedPrefix}bite_
 ┃ ❖ _${usedPrefix}bonk_  [ @user ]
 ┃ ❖ _${usedPrefix}bonks_
+┃ ❖ _${usedPrefix}bully_
 ┃ ❖ _${usedPrefix}cringe_
 ┃ ❖ _${usedPrefix}cry_
 ┃ ❖ _${usedPrefix}cuddle_
+┃ ❖ _${usedPrefix}dance_
 ┃ ❖ _${usedPrefix}facepalm_
 ┃ ❖ _${usedPrefix}glomp_
 ┃ ❖ _${usedPrefix}happy_
@@ -19,7 +21,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}kicks_
 ┃ ❖ _${usedPrefix}kill_
 ┃ ❖ _${usedPrefix}kiss_
-┃ ❖ _${usedPrefix}kitsune_
+┃ ❖ _${usedPrefix}lick_
 ┃ ❖ _${usedPrefix}nekoz_
 ┃ ❖ _${usedPrefix}notstonk_
 ┃ ❖ _${usedPrefix}nyan_
