@@ -9,7 +9,7 @@ let handler = async (m, { conn}) => {
   let { 
 url
 } = json
-let stiker = await sticker(null, url, 'Bonks', '@Kokoronationz')
+let stiker = await sticker(null, url, 'Bonks', global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })

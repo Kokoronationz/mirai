@@ -5,7 +5,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, text }) => {
 try {
   let cdl = `https://hardianto.xyz/api/anime/random?sfw=cuddle&apikey=hardianto`
-  let stiker = await sticker(null, cdl, 'Cuddle', '@Kokoronationz')
+  let stiker = await sticker(null, cdl, 'Cuddle', global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
