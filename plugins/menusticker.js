@@ -6,6 +6,7 @@ let teks = `
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃ ❖ _${usedPrefix}attp_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}attp2_  [ teks ] Ⓛ
+┃ ❖ _${usedPrefix}stickergura_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}getexif_  [ reply sticker ]
 ┃ ❖ _${usedPrefix}semoji_  [ type|emoji ] Ⓛ
 ┃ ❖ _${usedPrefix}stickermeme_  [ teks|teks ] Ⓛ
