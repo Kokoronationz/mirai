@@ -39,5 +39,5 @@ await conn.reply(m.chat, isi, m)
 
 handler.command = /^cekresi$/i
 handler.register = true
-
+handler.limit = true
 module.exports = handler
