@@ -16,6 +16,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}facepalm_
 ┃ ❖ _${usedPrefix}glomp_
 ┃ ❖ _${usedPrefix}happy_
+┃ ❖ _${usedPrefix}handhold_
 ┃ ❖ _${usedPrefix}highfive_
 ┃ ❖ _${usedPrefix}hug_
 ┃ ❖ _${usedPrefix}kicks_
