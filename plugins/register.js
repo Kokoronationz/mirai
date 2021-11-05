@@ -30,6 +30,7 @@ let handler = async function (m, { text, usedPrefix }) {
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━━ ┅ ━
 
  _Simpan Serial Number anda!_
+ _*jika sn kamu hilang, ketik ${usedPrefix}ceksn_
 `.trim()
 await conn.fakeReply(m.chat, caption,/* { 
   key: { 
