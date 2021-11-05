@@ -11,8 +11,10 @@ let  [ text ] = `
 ┃ ❖ _${usedPrefix}mulaiabsen_  [ text ] Ⓐ
 ┃ ❖ _${usedPrefix}enable_  [ option ] Ⓐ
 ┃ ❖ _${usedPrefix}disable_  [ option ] Ⓐ
-┃ ❖ _${usedPrefix}group_  [ close ] Ⓐ
-┃ ❖ _${usedPrefix}group_  [ open ] Ⓐ
+┃ ❖ _${usedPrefix}group_  [ chat open ] Ⓐ
+┃ ❖ _${usedPrefix}group_  [ chat close ] Ⓐ
+┃ ❖ _${usedPrefix}group_  [ setting admin ] Ⓐ
+┃ ❖ _${usedPrefix}group_  [ setting member ] Ⓐ
 ┃ ❖ _${usedPrefix}groupinfo_
 ┃ ❖ _${usedPrefix}getsider_
 ┃ ❖ _${usedPrefix}htag_  [ jumlah  pesan ] Ⓐ
