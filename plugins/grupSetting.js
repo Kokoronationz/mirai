@@ -1,5 +1,11 @@
 let { Presence, GroupSettingChange } = require('@adiwajshing/baileys')
 let handler  = async (m, { conn, args, usedPrefix, command }) => {
+  let pac =  `
+*Format salah! Contoh :*
+
+  *○ ${usedPrefix + command} setting admin*
+  *○ ${usedPrefix + command} chat open*
+`.trim()
 	let isGc = { // Switch Case Like :v
 		'setting': GroupSettingChange.settingsChange,
 		'chat': GroupSettingChange.messageSend,
@@ -11,13 +17,10 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 		'admin': true,
 	}[(args[1] || '')]
 	await conn.updatePresence(m.chat, Presence.composing)
-	if (isClose && isGc === undefined)
-		throw `
-*Format salah! Contoh :*
-
-  *○ ${usedPrefix + command} setting admin*
-  *○ ${usedPrefix + command} chat open*
-`.trim()
+	if (isGc === undefined)
+		throw pac
+	if (isClose === undefined)
+		throw pac
 	await conn.groupSettingChange(m.chat, isGc, isClose)
 }
 //handler.help = ['group *open / close*']
