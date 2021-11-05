@@ -42,7 +42,7 @@ let  [ text ] = `
   }
 handler.help = ['groupmenu']
 handler.tags = ['main']
-handler.command = /^groupmenu$/i
+handler.command = /^gro?upmenu$/i
 handler.register = true
 handler.group = false
 handler.private = false
