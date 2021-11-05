@@ -1,6 +1,6 @@
 let handler  = async (m, { conn, usedPrefix }) => {
   
-let  [ text ] = `
+let  teks = `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┇       *「 GROUPS 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
@@ -38,7 +38,7 @@ let  [ text ] = `
 ┃ ❖ _${usedPrefix}delwarn_  Ⓐ
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim()
-  conn.fakeReply(m.chat,  [ text ], '0@s.whatsapp.net', 'Group Menu', 'status@broadcast')
+  conn.fakeReply(m.chat,  teks, '0@s.whatsapp.net', 'Group Menu', 'status@broadcast')
   }
 handler.help = ['groupmenu']
 handler.tags = ['main']
