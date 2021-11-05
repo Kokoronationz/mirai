@@ -11,7 +11,7 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 		'admin': true,
 	}[(args[1] || '')]
 	await conn.updatePresence(m.chat, Presence.composing)
-	if (isClose === undefined)
+	if (isClose && isGc === undefined)
 		throw `
 *Format salah! Contoh :*
 
