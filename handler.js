@@ -63,6 +63,7 @@ module.exports = {
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!isNumber(user.lastdaily)) user.lastdaily = 0
           if (!isNumber(user.lastadventure)) user.lastadventure = 0
+          if (!isNumber(user.premdate)) user.premdate = 0
           if (!('registered' in user)) user.registered = false
           if (!user.registered) {
             if (!('name' in user)) user.name = this.getName(m.sender)
@@ -109,6 +110,7 @@ module.exports = {
           lastclaim: 0,
           lastdaily: 0,
           lastadventure: 0,
+          premdate: 0,
           registered: false,
           name: this.getName(m.sender),
           age: -1,
