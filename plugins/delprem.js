@@ -10,6 +10,7 @@ let handler = async (m, { conn, args }) => {
     json.splice(index, 1)
     fs.writeFileSync('./src/premium.json', JSON.stringify(json))
     m.reply(`${conn.getName(who)} sekarang bukan premium!`)
+    global.db.data.users[who].premdate = 0
 
     delete require.cache[require.resolve('../config')]
     require('../config')
