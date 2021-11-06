@@ -56,7 +56,7 @@ let handler = async (m, { conn, text }) => {
 //handler.help = ['slot']
 //handler.tags = ['game']
 handler.command = /^(slot)$/i
-handler.group = true
+handler.group = false
 handler.register = true
 
 handler.exp = 10
