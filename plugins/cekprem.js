@@ -5,7 +5,7 @@ let handler = async (m, { conn, isPrems }) => {
   if (!json.includes(who.split`@`[0])) throw `${conn.getName(who)} belum premium!`
   let users = global.db.data.users[who].premdate
   let sisa = msToDate (users - new Date()*1)
-  conn.send2Button(m.chat, `Dear ${await conn.getName(who)}, Masa aktif premium kamu tersisa ${sisa}`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
+  conn.send2Button(m.chat, `Dear ${await conn.getName(who)}, Masa aktif premium kamu tersisa\n\n${sisa}`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
 }
 //handler.help = ['cekprem']
 //handler.tags = ['main']
