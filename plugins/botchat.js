@@ -1,10 +1,10 @@
 let handler  = async (m, { conn }) => {
   
 let name = conn.getName(m.sender)
-let pesan = `Hai ${name}, aku disini:D\n\nAda yang bisa aku bantu?`
-conn.reply(m.chat, pesan, m)
+let pesan = `_Hai ${name}, saya disini:D_\n\n_Ada yang bisa saya bantu?_`
+conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Salam Hangat Dari Owner', 'status@broadcast')
 }
-handler.customPrefix = /Bot/
+handler.customPrefix = /Bot/g
 handler.command = new RegExp
 
 module.exports = handler
