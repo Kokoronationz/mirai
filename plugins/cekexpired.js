@@ -1,8 +1,9 @@
 let handler = async (m, { conn, isGroup, groupMetadata }) => {
-  if (!isGroup) throw false
   let grup = global.db.data.chats[m.chat].expired
-  let sisa = clockString (grup - new Date)
-  conn.send2Button(m.chat, `_Sisa waktu Bot digrup *${groupMetadata.subject}* ${sisa}_`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
+  if (!isGroup) throw false
+  if (grup == 0) throw 'Grup ini belum ada batasan waktu'
+  let sisa = msToDate(grup - new Date()*1)
+  conn.send2Button(m.chat, `Sisa waktu Bot digrup *${groupMetadata.subject}*\n\n${sisa}`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
 }
 //handler.help = ['cekexpired']
 //handler.tags = ['main']
@@ -11,9 +12,15 @@ handler.register = true
 
 module.exports = handler
 
-function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+function msToDate(ms) {
+    temp = ms
+    days = Math.floor(ms / (24 * 60 * 60 * 1000));
+    daysms = ms % (24 * 60 * 60 * 1000);
+    hours = Math.floor((daysms) / (60 * 60 * 1000));
+    hoursms = ms % (60 * 60 * 1000);
+    minutes = Math.floor((hoursms) / (60 * 1000));
+    minutesms = ms % (60 * 1000);
+    sec = Math.floor((minutesms) / (1000));
+    return days + " hari " + hours + " jam " + minutes + " menit";
+    // +minutes+":"+sec;
 }
