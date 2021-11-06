@@ -1,6 +1,5 @@
 let handler = async (m, { conn, isGroup, groupMetadata }) => {
   let grup = global.db.data.chats[m.chat].expired
-  if (isGroup) throw false
   if (grup == 0) throw 'Grup ini belum ada batasan waktu'
   let sisa = msToDate(grup - new Date()*1)
   conn.send2Button(m.chat, `Sisa waktu Bot digrup *${groupMetadata.subject}*\n\n${sisa}`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
@@ -9,6 +8,7 @@ let handler = async (m, { conn, isGroup, groupMetadata }) => {
 //handler.tags = ['main']
 handler.command = /^cekexpired$/
 handler.register = true
+handler.group = true
 
 module.exports = handler
 
