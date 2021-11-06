@@ -1,5 +1,7 @@
-let handler = async (m, { conn, usedPrefix }) => {
+let handler = async (m, { conn, isPrems }) => {
+  const json = JSON.parse(fs.readFileSync('./src/premium.json'))
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+  if (!json.includes(who.split`@`[0])) throw `${conn.getName(who)} belum premium!`
   let users = global.db.data.users[who].premdate
   let sisa = msToDate (users - new Date()*1)
   conn.send2Button(m.chat, `_Dear ${await conn.getName(m.sender)}, Masa aktif premium kamu tersisa ${sisa}_`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
