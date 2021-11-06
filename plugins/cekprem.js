@@ -2,7 +2,7 @@ let handler = async (m, { conn, usedPrefix }) => {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   let users = global.db.data.users[who].premdate
   let sisa = clockString (users - new Date)
-  conn.send2Button(m.sender, `_Dear ${await conn.getName(m.sender)}, Masa aktif premium kamu tersisa ${sisa}_`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
+  conn.send2Button(m.chat, `_Dear ${await conn.getName(m.sender)}, Masa aktif premium kamu tersisa ${sisa}_`, 'Silahkan perpanjang ke Owner', 'Perpanjang', '.premium', 'Owner', '.owner')
 }
 //handler.help = ['cekprem']
 //handler.tags = ['main']
