@@ -1,7 +1,9 @@
 const { MessageType } = require('@adiwajshing/baileys')
 const { sticker } = require('../lib/sticker')
+let num = /([0-9])$/i
 let handler = async (m, { conn, text }) => {
   if (text.length > 7) throw 'Max. 7 huruf!'
+  if (num.test(text)) throw 'Hanya Angka'
   if (!text) text = await conn.getName(m.sender)
   await m.reply(global.wait)
   let apiUrl = global.API( 'http://hardianto-chan.herokuapp.com', '/api/bot/gura', {
