@@ -1,3 +1,4 @@
+let fs = require('fs')
 let handler = async (m, { conn, isPrems }) => {
   const json = JSON.parse(fs.readFileSync('./src/premium.json'))
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
