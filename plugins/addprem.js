@@ -1,5 +1,5 @@
 let fs = require('fs')
-let handler = async (m, { conn, args }) => {
+let handler = async (m, { conn, args, usedPrefix, command }) => {
 
     const json = JSON.parse(fs.readFileSync('./src/premium.json'))
     let who
@@ -7,6 +7,7 @@ let handler = async (m, { conn, args }) => {
     else who = args[0] ? args[0].replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat
     var jumlahHari = 86400000 * args[0]
     var now = new Date() * 1
+    if (!args[0] || isNaN(args[0])) throw `Masukan angka mewakili jumlah hari!\n\ncontoh:\n${usedPrefix + command} 30`
     if (now < global.db.data.users[who].premdate) global.db.data.users[who].premdate += jumlahHari
     else global.db.data.users[who].premdate = now + jumlahHari
     if (json.includes(who.split`@`[0])) throw `${conn.getName(who)} sudah premium!`
