@@ -1,13 +1,13 @@
 let num = /([0-9])$/i
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.quoted.sender ? m.quoted.sender : m.sender
-  let user = global.db.data.users[who]
+  
   let nama = await conn.getName(who)
   let dt = { // Switch Case Like :v
-		'uang': user.uang,
-		'healt': user.healt,
-		'limit': user.limit,
-		'level': user.level,
+		'uang': global.db.data.users[who].uang,
+		'healt': global.db.data.users[who].healt,
+		'limit': global.db.data.users[who].limit,
+		'level': global.db.data.users[who].level,
   }[(args[0] || '')]
   let count = parseInt(args[1])
   let salah = `
