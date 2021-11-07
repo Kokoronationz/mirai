@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   let dt = { // Switch Case Like :v
 		'uang': user.uang,
 		'healt': user.healt,
-		'limit': userlimit,
+		'limit': user.limit,
 		'level': user.level,
   }[(args[0] || '')]
   let count = parseInt(args[1])
