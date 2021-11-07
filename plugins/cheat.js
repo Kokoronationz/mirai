@@ -23,7 +23,7 @@ level
   *○ ${usedPrefix + command} limit 2*
 `.trim()
   if (dt === undefined) throw salah
-  if (!num.test(count)) throw 'Hanya Angka'
+  if (!num.test(args[1])) throw 'Hanya Angka'
   dt += count
 await m.reply(`${args[0]} ${nama} telah bertambah sebanyak ${count}`)
 }
