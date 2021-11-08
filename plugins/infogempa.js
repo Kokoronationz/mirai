@@ -3,7 +3,6 @@ let handler = async (m, { conn, text }) => {
     await m.reply(global.wait)
     let res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json')
   let json = await res.json()
-  let { gempa } = json.infogempa
   let { 
     Tanggal,
     Jam,
@@ -17,7 +16,7 @@ let handler = async (m, { conn, text }) => {
     Potensi,
     Dirasakan,
     Shakemap
-  } = gempa
+  } = json.Infogempa.gempa
      let hasil = `
 *「 INFO GEMPA 」*
 
