@@ -5,7 +5,7 @@ let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say('Kokoronationz\nMirai Bot', {
-  font: 'shade',
+  font: 'block',
   align: 'center',
   gradient: ['red', 'magenta']
 })
