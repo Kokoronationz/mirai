@@ -50,7 +50,6 @@ module.exports = {
           if (!isNumber(user.anakkucing)) user.anakkucing = 0
           if (!isNumber(user.anakkuda)) user.anakkuda = 0
           if (!isNumber(user.anakrubah)) user.anakrubah = 0
-          if (!isNumber(user.anakanjing)) user.anakanjing = 0
           if (!isNumber(user.makananpet)) user.makananpet = 0
           
           if (!isNumber(user.exp)) user.exp = 0
