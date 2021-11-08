@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { text }) => {
   if (!/^https?:\/\//.test(text)) throw 'Awali *URL* dengan http:// atau https://'
   await m.reply(global.wait)
-  let res = fetch('http://docs-jojo.herokuapp.com/api/shorturl-at?url='+text)
+  let res = await fetch('http://docs-jojo.herokuapp.com/api/shorturl-at?url='+text)
   let json = await res.json()
   let { 
     result
