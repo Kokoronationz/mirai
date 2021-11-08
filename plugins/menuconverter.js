@@ -10,6 +10,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}heleh_
 ┃ ❖ _${usedPrefix}holoh_
 ┃ ❖ _${usedPrefix}tobraille_
+┃ ❖ _${usedPrefix}shorturl_
 ┃ ❖ _${usedPrefix}toimg_
 ┃ ❖ _${usedPrefix}toimg2_
 ┃ ❖ _${usedPrefix}togif_
