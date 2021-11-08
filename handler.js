@@ -154,7 +154,7 @@ module.exports = {
         console.error(e)
       }
       if (opts['nyimak']) return
-      if (!m.fromMe && opts['self']) return
+      if (!(global.owner.includes(m.sender.split("@")[0]) || m.fromMe) && opts['self']) return
       if (opts['pconly'] && m.chat.endsWith('g.us')) return
       if (opts['gconly'] && !m.chat.endsWith('g.us')) return
       if (opts['swonly'] && m.chat !== 'status@broadcast') return
