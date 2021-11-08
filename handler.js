@@ -46,8 +46,6 @@ module.exports = {
           if (!isNumber(user.kudalastclaim)) user.kudalastclaim = 0
           if (!isNumber(user.rubah)) user.rubah = 0
           if (!isNumber(user.rubahlastclaim)) user.rubahlastclaim = 0
-          if (!isNumber(user.anjing)) user.anjing = 0
-          if (!isNumber(user.anjinglastclaim)) user.anjinglastclaim = 0
           
           if (!isNumber(user.anakkucing)) user.anakkucing = 0
           if (!isNumber(user.anakkuda)) user.anakkuda = 0
@@ -95,12 +93,9 @@ module.exports = {
           kudalastclaim: 0,
           rubah: 0,
           rubahlastclaim: 0,
-          anjing: 0,
-          anjinglastclaim: 0,
           anakkucing: 0,
           anakkuda: 0,
           anakrubah: 0,
-          anakanjing: 0,
           makananpet: 0,
           exp: 0,
           limit: 10,
