@@ -19,17 +19,7 @@ global.APIs = { // API Prefix
   zeks: 'https://api.zeks.xyz',
   LeysCoder: 'https://leyscoders-api.herokuapp.com'
 }
-global.APIKeys = { // APIKey Here
-  // 'https://website': 'apikey'
-  'https://bx-hunter.herokuapp.com': 'Ikyy69',
-  'https://hardianto-chan.herokuapp.com': 'hardianto',
-  'https://neoxr-api.herokuapp.com': 'yntkts',
-  'https://api.xteam.xyz': 'iniApikey',
-  'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
-  'https://pencarikode.xyz': 'pais',
-  'https://leyscoders-api.herokuapp.com': 'dappakntlll'
-}
+global.APIKeys = JSON.parse(fs.readFileSync('./src/apikey.json'))
 
 // Sticker WM
 
