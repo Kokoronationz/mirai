@@ -26,7 +26,7 @@ let handler = async (m, { conn, text }) => {
 *Koordinat:* ${Coordinates}
 *Lintang:* ${Lintang}
 *Bujur:* ${Bujur}
-*Lokasi:* ${Lokasi}
+*Lokasi:* ${Wilayah}
 *Dirasakan:* ${Dirasakan}
 *Potensi:* ${Potensi}
      `.trim()
