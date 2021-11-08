@@ -1,21 +1,37 @@
-const axios = require('axios')
-
-let handler = async(m, { conn, text, usedPrefix }) => {
-
+let fetch = require('node-fetch')
+let handler = async (m, { conn, text }) => {
     await m.reply(global.wait)
-    axios.get(`http://docs-jojo.herokuapp.com/api/infogempa`)
-        .then((res) => {
+    let res = await fetch('https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json')
+  let json = await res.json()
+  let { 
+    Tanggal,
+    Jam,
+    DateTime,
+    Coordinates,
+    Lintang,
+    Bujur,
+    Magnitude,
+    Kedalaman,
+    Wilayah,
+    Potensi,
+    Dirasakan,
+    Shakemap
+  } = json.infogempa.gempa
      let hasil = `
 *「 INFO GEMPA 」*
 
-*Waktu:* ${res.data.waktu}
-*Magnitudo:* ${res.data.magnitude}
-*Kedalaman:* ${res.data.kedalaman}
-*Koordinat:* ${res.data.koordinat}
-*Lokasi:* ${res.data.lokasi}
-*Potensi:* ${res.data.potensi}
+*Waktu:* ${Tanggal}, ${Jam}
+*Magnitudo:* ${Magnitude}
+*Kedalaman:* ${Kedalaman}
+*Koordinat:* ${Coordinates}
+*Lintang:* ${Lintang}
+*Bujur:* ${Bujur}
+*Lokasi:* ${Lokasi}
+*Dirasakan:* ${Dirasakan}
+*Potensi:* ${Potensi}
      `.trim()
-     if (res.data.map) conn.sendFile(m.chat, res.data.map, 'map.jpg', hasil, m)
+     let map = 'https://data.bmkg.go.id/DataMKG/TEWS/'+Shakemap
+     if (map) conn.sendFile(m.chat, map, 'map.jpg', hasil, m)
      else m.reply(hasil)
         })
         .catch()
