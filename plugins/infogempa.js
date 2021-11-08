@@ -33,8 +33,6 @@ let handler = async (m, { conn, text }) => {
      let map = 'https://data.bmkg.go.id/DataMKG/TEWS/'+Shakemap
      if (map) conn.sendFile(m.chat, map, 'map.jpg', hasil, m)
      else m.reply(hasil)
-        })
-        .catch()
 }
 //handler.help = ['infogempa']
 //handler.tags = ['internet']
