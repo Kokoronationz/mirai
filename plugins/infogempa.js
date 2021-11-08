@@ -3,7 +3,7 @@ const axios = require('axios')
 let handler = async(m, { conn, text, usedPrefix }) => {
 
     await m.reply(global.wait)
-    axios.get(`https://tobz-api.herokuapp.com/api/infogempa?apikey=Tobzzz17`)
+    axios.get(`http://docs-jojo.herokuapp.com/api/infogempa`)
         .then((res) => {
      let hasil = `
 *「 INFO GEMPA 」*
@@ -15,7 +15,8 @@ let handler = async(m, { conn, text, usedPrefix }) => {
 *Lokasi:* ${res.data.lokasi}
 *Potensi:* ${res.data.potensi}
      `.trim()
-            conn.sendFile(m.chat, res.data.map, 'map.jpg', hasil, m)
+     if (res.data.map) conn.sendFile(m.chat, res.data.map, 'map.jpg', hasil, m)
+     else m.reply(hasil)
         })
         .catch()
 }
