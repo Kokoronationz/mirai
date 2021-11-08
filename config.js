@@ -1,7 +1,7 @@
 let fs = require('fs')
 let chalk = require('chalk')
 
-global.owner = ['62895361677059', '6285156381082','62887436568613'] // Put your number here
+global.owner = JSON.parse(fs.readFileSync('./src/owner.json')) // Put your number here
 global.mods = [] // Want some help?
 global.prems = JSON.parse(fs.readFileSync('./src/premium.json')) // Premium user has unlimited limit
 global.wait = '```Fuyukai desu....```'
