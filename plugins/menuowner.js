@@ -5,6 +5,8 @@ let teks = `
 ┇       *「 OWNER MENU 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃ ❖ _${usedPrefix}addprems_  [ @user ]
+┃ ❖ _${usedPrefix}addowner_  [ @user ]
+┃ ❖ _${usedPrefix}delowner_  [ @user ]
 ┃ ❖ _${usedPrefix}banchat_
 ┃ ❖ _${usedPrefix}unbanchat_
 ┃ ❖ _${usedPrefix}ban_  [ @user ]
