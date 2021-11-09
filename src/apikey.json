@@ -1,4 +1,5 @@
-{
+{ // APIKey Here
+  // 'https://website': 'apikey'
   "https://bx-hunter.herokuapp.com": "Ikyy69",
   "https://hardianto-chan.herokuapp.com": "hardianto",
   "https://neoxr-api.herokuapp.com": "yntkts",
