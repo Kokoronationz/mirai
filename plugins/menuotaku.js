@@ -6,6 +6,7 @@ let teks = `
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃ ❖ _${usedPrefix}anime_  [ judul ] Ⓛ
 ┃ ❖ _${usedPrefix}chara_  [ nama ] Ⓛ
+┃ ❖ _${usedPrefix}husbu_  Ⓛ
 ┃ ❖ _${usedPrefix}kanji_  Ⓛ
 ┃ ❖ _${usedPrefix}mangainfo_  [ judul ] Ⓛ
 ┃ ❖ _${usedPrefix}waifu_  Ⓛ
