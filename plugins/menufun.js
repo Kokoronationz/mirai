@@ -14,6 +14,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}siapa + kah_  [ pertanyaan ]
 ┃ ❖ _${usedPrefix}bucincek_
 ┃ ❖ _${usedPrefix}cantikcek_
+┃ ❖ _${usedPrefix}ceksifat_
 ┃ ❖ _${usedPrefix}furrycek_
 ┃ ❖ _${usedPrefix}gabutcek_
 ┃ ❖ _${usedPrefix}gantengcek_
