@@ -8,7 +8,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
   if (!res.ok) throw await `${res.status} ${res.statusText}`
   let json = await res.json()
   if (!json.status) throw json
-  let pint = json[Math.floor(Math.random() * json.length)];
+  let pint = json.parse[Math.floor(Math.random() * json.parse.length)];
   conn.sendFile(m.chat, pint, '', `
 *Hasil pencarian*
 ${text}
