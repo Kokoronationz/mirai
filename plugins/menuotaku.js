@@ -15,6 +15,7 @@ let teks = `
 ┃ ❖ _${usedPrefix}wallpaper_  Ⓟ
 ┃ ❖ _${usedPrefix}wallpaperanime_  Ⓟ
 ┃ ❖ _${usedPrefix}wait_  [ caption|reply media ] Ⓟ
+┃ ❖ _${usedPrefix}zettairyouiki_  Ⓛ
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim()
   conn.fakeReply(m.chat, teks, '0@s.whatsapp.net', 'Cara Menjadi Wibu Elit', 'status@broadcast')
