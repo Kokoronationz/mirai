@@ -9,7 +9,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┃ Total : ${chats.length} Chat${chats ? '\n' + chats.map(([jid], i) => `
 ┃ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 ┃ ${jid}
-`.trim()).join('\n') : ''}
+`.trim()).join('\n') : '┃ '}
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
@@ -18,7 +18,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┃ Total : ${users.length} User${users ? '\n' + users.map(([jid], i) => `
 ┃ ${i + 1}. ${conn.getName(jid) == undefined ? 'Unknown' : conn.getName(jid)}
 ┃ ${jid}
-`.trim()).join('\n') : ''}
+`.trim()).join('\n') : '┃ '}
 ┗ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 `.trim())
 }
