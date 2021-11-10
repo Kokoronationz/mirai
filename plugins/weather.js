@@ -26,5 +26,5 @@ console.log(e)
 //handler.help = ['weather','cuaca']
 //handler.tags = ['internet']
 handler.command = /^(weather|wthr|cuaca)$/i
-
+handler.limit = true
 module.exports = handler
