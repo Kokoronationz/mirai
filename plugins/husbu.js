@@ -10,7 +10,7 @@ let husbu = items[Math.floor(Math.random() * items.length)];
   if (!json.status) throw json
   let pint = json.data[Math.floor(Math.random() * json.data.length)];
   conn.sendFile(m.chat, pint, '', `
-*Nih pedo!*
+*Cowo kok anime!*
 ${text}
 `.trim(), m)
 }
