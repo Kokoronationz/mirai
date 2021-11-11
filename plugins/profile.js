@@ -20,10 +20,10 @@ let handler = async (m, { conn, usedPrefix }) => {
 *Name:* ${username} ${registered ? '(' + name + ') ': ''}(@${who.replace(/@.+/, '')})${about ? '\n*About:* ' + about : ''}
 *Number:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 *Link:* https://wa.me/${who.split`@`[0]}${registered ? '\n*Age:* ' + age : ''}
-*Saldo:* Rp${uang}
 *XP:* TOTAL ${exp} (${exp - min} / ${xp}) [${math <= 0 ? `Ready to *${usedPrefix}levelup*` : `${math} XP left to levelup`}]
 *Level:* ${level}
 *Role:* ${role}
+*Saldo:* Rp${uang}
 *Limit:* ${limit}
 *Registered:* ${registered ? 'Yes (' + new Date(regTime) + ')': 'No'}
 *Premium:* ${prem ? 'Yes' : 'No'}${lastclaim > 0 ? '\n*Last Claim:* ' + new Date(lastclaim) : ''}
