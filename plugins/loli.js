@@ -8,9 +8,9 @@ let json = await res.json();
 let url = json[Math.floor(Math.random() * json.length)]
 await conn.sendButtonImg(m.chat, await (await fetch(url)).buffer(), 'Random Loli', '© 栗山未来', 'Next', '.loli', m)
 }
-//handler.command = /^(loli)$/i
+handler.command = /^(loli)$/i
 //handler.tags = ['otaku']
-handler.help = ['loli']
+//handler.help = ['loli']
 handler.register = true
 handler.limit = true
 module.exports = handler
