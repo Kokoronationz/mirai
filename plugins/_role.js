@@ -24,7 +24,7 @@ const roles = {
   'Titan III': 190,
   'Titan II': 200,
   'Titan I': 210,
-  'LEGEND 💎': 250
+  'LEGEND': 250
 }
 
 module.exports = {
