@@ -6,11 +6,11 @@ let handler = async(m, { conn, command }) => {
   let json = await res.json()
   if (!json.url) throw 'Error!'
   //conn.sendFile(m.chat, json.url, '', '© 栗山未来', m)
-  await conn.sendButtonImg(m.chat, await(await fetch(json.url)).buffer(), '© 栗山未来', '', 'Next', m.text, m)
+  await conn.sendButtonImg(m.chat, await(await fetch(json.url)).buffer(), 'Random '+command, '© 栗山未来', 'Next', m.text, m)
 }
 //handler.help = ['waifu']
 //handler.tags = ['internet']
-handler.command = /^(waifu|neko|megumin|shinobu|kitsune|loli)$/i
+handler.command = /^(waifu|neko|megumin|shinobu|kitsune)$/i
 handler.register = true
 handler.limit = true
 
