@@ -3,14 +3,28 @@ const roles = {
   'Role Name': <Minimal Level To Obtain this Role>
   */
   'Beginner': 0,
-  'Kitten Town': 10,
-  'Black Woods': 20,
-  'Farmount': 30,
-  'Rosenvale': 40,
-  'Amberhill': 50,
-  'Master Fap': 60,
-  'Master Woods': 80,
-  'Legend': 90
+  'Bronze III': 10,
+  'Bronze II': 20,
+  'Bronze I': 30,
+  'Silver III': 40,
+  'Silver II': 50,
+  'Silver I': 60,
+  'Gold III': 70,
+  'Gold II': 80,
+  'Gold I': 90,
+  'Crystal III': 100,
+  'Crystal II': 110,
+  'Crystal I': 120,
+  'Master III': 130,
+  'Master II': 140,
+  'Master I': 150,
+  'Champion III': 160,
+  'Champion II': 170,
+  'Champion I': 180,
+  'Titan III': 190,
+  'Titan II': 200,
+  'Titan I': 210,
+  'Legend 💎': 250
 }
 
 module.exports = {
