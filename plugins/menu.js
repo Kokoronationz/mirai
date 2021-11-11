@@ -134,7 +134,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       '%': '%',
       p: _p, uptime, muptime,
       me: conn.user.name,
-      nama: await conn.getName(m.sender)
+      nama: await conn.getName(m.sender),
       npmname: package.name,
       npmdesc: package.description,
       version: package.version,
