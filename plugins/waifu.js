@@ -6,7 +6,7 @@ let handler = async(m, { conn, command }) => {
   let json = await res.json()
   if (!json.url) throw 'Error!'
   //conn.sendFile(m.chat, json.url, '', '© 栗山未来', m)
-  await conn.sendButtonImg(m.chat, json.url, '© 栗山未来', '', 'Next', '.'+command, m)
+  await conn.sendButtonImg(m.chat, await(await fetch(json.url)).buffer(), '© 栗山未来', '', 'Next', m.text, m)
 }
 //handler.help = ['waifu']
 //handler.tags = ['internet']
