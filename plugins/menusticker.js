@@ -2,11 +2,10 @@ let handler  = async (m, { conn, usedPrefix }) => {
   
 let teks = `
 ┏ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
-┇       *「 STICKER 」*
+┇       *「 STICKERS 」*
 ┣ ┅ ━━━━━━━━━━━━━━━━━━━━ ┅ ━
 ┃ ❖ _${usedPrefix}attp_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}attp2_  [ teks ] Ⓛ
-┃ ❖ _${usedPrefix}stickergura_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}getexif_  [ reply sticker ]
 ┃ ❖ _${usedPrefix}semoji_  [ type|emoji ] Ⓛ
 ┃ ❖ _${usedPrefix}stickermeme_  [ teks|teks ] Ⓛ
@@ -14,6 +13,9 @@ let teks = `
 ┃ ❖ _${usedPrefix}sticker_  [ url ] Ⓛ
 ┃ ❖ _${usedPrefix}stickergif_  [ reply media ] Ⓛ
 ┃ ❖ _${usedPrefix}stickergif_  [ url ] Ⓛ
+┃ ❖ _${usedPrefix}sticker2_  [ reply media ] Ⓛ
+┃ ❖ _${usedPrefix}sticker2_  [ url ] Ⓛ
+┃ ❖ _${usedPrefix}stickergura_  [ teks ] Ⓛ
 ┃ ❖ _${usedPrefix}stickerline_  [ url ] Ⓛ
 ┃ ❖ _${usedPrefix}stickerly_  [ url ] Ⓛ
 ┃ ❖ _${usedPrefix}stickertelegram_  [ url ] Ⓛ
@@ -30,7 +32,7 @@ let teks = `
 handler.help = ['stickermenu']
 handler.tags = ['main']
 handler.command = /^stickermenu$/i
-handler.register = false
+handler.register = true
 handler.group = false
 handler.private = false
 handler.limit = false
