@@ -5,6 +5,6 @@ type: 'audioMessage', // paksa tanpa convert di ffmpeg
 ptt: true // true diatas ga work, sebab dipaksa tanpa convert ;v
 })
 }
-handler.customPrefix = /^Ass?alamu'?alaikum$/g
+handler.customPrefix = /^ass?alamu'?alaikum$/i
 handler.command = new RegExp
 module.exports = handler
