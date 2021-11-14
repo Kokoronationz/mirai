@@ -53,8 +53,10 @@ Ketik *nyerah* untuk nyerah
             state: 'WAITING'
         }
         if (text) room.name = text
-        m.reply('Menunggu partner' + (text ? ` mengetik command dibawah ini
-${usedPrefix}${command} ${text}` : ''))
+        //m.reply('Menunggu partner' + (text ? ` mengetik command dibawah ini
+//${usedPrefix}${command} ${text}` : ''))
+        conn.sendButton(m.chat, 'Menunggu partner' + (text ? ` mengetik command dibawah ini
+${usedPrefix}${command} ${text}` : ''), '© 栗山未来', 'TicTacToe', m.text)
         conn.game[room.id] = room
     }
 }
