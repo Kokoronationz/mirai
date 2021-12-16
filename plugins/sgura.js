@@ -6,7 +6,7 @@ let handler = async (m, { conn, text }) => {
   if (num.test(text)) throw 'Hanya Huruf!'
   if (!text) text = await conn.getName(m.sender)
   await m.reply(global.wait)
-  let apiUrl = global.API( 'http://hardianto-chan.herokuapp.com', '/api/bot/gura', {
+  let apiUrl = global.API( 'https://hardianto.xyz', '/api/bot/gura', {
     apikey: 'hardianto',
     nama: text
   })
