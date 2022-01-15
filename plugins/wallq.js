@@ -1,6 +1,3 @@
-// cewe yang ada di iklan royco bikin ange njing
-// pdhl cuma iklan :v
-
 const fetch = require('node-fetch')
 
 let handler = async (m, { conn, text }) => {
@@ -14,7 +11,7 @@ let handler = async (m, { conn, text }) => {
   if (!res.ok) throw await res.text()
   let json = await res.json()
   let img = json.wallpapers[Math.floor(Math.random() * json.wallpapers.length)]
-  await conn.sendFile(m.chat, img.url_image, 'wallpaper', '© 栗山未来', m)
+  await conn.sendButtonImg(m.chat, await(await fetch(img.url_image)).buffer(), `Hasil Pencarian\n${text}`, '© 栗山未来', 'Next', m.text, m)
 }
 //handler.help = ['wallpaperq <query>']
 //handler.tags = ['internet']
