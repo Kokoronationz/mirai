@@ -6,9 +6,7 @@ let handler = async (m, { conn }) => {
       await m.reply(global.wait)
         let res = await fetch(global.API('xteam', '/randomimage/wpmobile', {}, 'APIKEY'))
         let img = await res.buffer()
-        conn.sendMessage(m.chat, img, MessageType.image, {
-            quoted: m, caption: '*©Kuriyama-bot*'
-        })
+        await conn.sendButtonImg(m.chat, img, 'Random Wallpaper', '© Kuriyama-bot', 'N e x t', '#wp', m)
     } catch (e) {
         console.log(e)
         throw '_*Owner belum membayar tagihan fitur ini*_'
